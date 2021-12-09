@@ -1,0 +1,175 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{tgtermes}
+\usepackage{fouriernc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=3cm]{geometry}
+
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{enumerate}
+\usepackage{verbatim}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+\title{Noter til IMO}
+
+
+\newcommand{\bpm}{\begin{pmatrix}}
+	\newcommand{\epm}{\end{pmatrix}}
+
+\newcommand{\diff}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\diffT}[1]{\frac{\partial^2}{\partial #1^2}}
+\newcommand{\diffMul}[2]{\frac{\partial^2}{\partial#1\partial#2}}
+
+\DeclareMathSymbol{*}{3}{symbols}{"01}
+\newcommand{\lra}{\ensuremath\Leftrightarrow}
+\newcommand{\np}{\newpage}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section*{Kapitel 3}
+	
+	\subsection{Definitioner, teorem, bemærkninger og propositioner}
+	
+	\begin{quote}
+		\textbf{Proposition 3.27} The product  $ AB $ of two invertible matrices $ A $ and $ B $ is invertible $ (AB)^{-1} = B^{-1}A^{-1} $
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{Proposition 3.33} Let $ A $ be an $ m \times r $ matrix and $ B $ an $ r\times n $ matrix. Then
+
+		\[ (A B)^T = B^T A^T \]
+		
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{Definition 3.7.1 Positive definite matrices}
+		En positiv definit matrice er givet ved 
+		
+		\[ v^TAv > 0 \]
+		
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{3.7.2 Positive semi-definite matrices}
+		En positiv semi definit matrice er givet ved
+		
+		\[ v^tAv \leq 0 \]
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{Proposition 3.41} Let $ A $ be a symmetric $ n\times n $ matrix and $ B $ an invertible $ n\times n $ matrix. Then $ A $ is positive (semi) definite if and only if
+		\[ B^T A B \]
+		is positive (semi) definite.
+	\end{quote}
+	
+	
+	\subsection{Opgaver}
+	
+	\begin{quote}
+		\textbf{Exercise 3.42} (Overvej kraftigt at bruge 8.26) Beviser at 
+		\[ D = \begin{pmatrix}
+			d & 0 \\ 0 & e
+		\end{pmatrix} \]
+		er positivt definit (ikke semi definit) hvis og kun hvis $ e > 0 \land d > 0 $
+		
+		Beviser også at 
+		
+		\[ A = \begin{pmatrix}
+			a & c \\ c & b
+		\end{pmatrix} \]
+	
+		Er positivt definit (ikke semi definit) hvis og kun hvis $ a > 0 \land ab - c^2 > 0 $
+	\end{quote}
+	
+	\section*{Kapitel 4}
+
+	\subsection{Definitioner, teorem, bemærkninger og propositioner}
+	
+	\begin{quote}
+		\textbf{Remark 4.6} 
+		\[ \begin{matrix}
+			\max f(x) \\ x \in C
+		\end{matrix}\quad  = \quad
+		\begin{matrix}
+			\min -f(x) \\ x \in C
+		\end{matrix}
+	\]
+	\end{quote}
+
+	\begin{quote}
+		\textbf{Definition 4.32} Definitionen på en konveks (ikke strengt) er
+		\[ f((1-t)x + ty) \leq (1-t)f(x) + tf(y) \]
+		for hvert tal $ t $ hvor $ 0 \leq t \leq 1 $
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{Lemma 4.26} Let $ f:\R^d\longrightarrow \R $ be a convex function. Then the subset 
+		
+		\[ C = \{x \in \R^d | f(x) \leq a\} \]
+		
+		is a convex subset of $ \R^d $, where $ a \in \R^2 $
+	\end{quote}
+	
+	\textbf{4.5 Fourier-Motzkin elimination}
+	
+	\subsection{Opgaver}	
+	
+	\section*{Kapitel 5}
+	
+	\subsection{Definitioner, teorem, bemærkninger og propositioner}
+	\begin{quote}
+		\textbf{5.2.3 Bounded subsets} A subset $ S \subseteq \R^d $
+		is called bounded if there exists $ M\in \R $, such that
+		\[ 		u\cdot u\leq M \]
+
+		for every $ u\in S $
+	\end{quote}
+	
+	
+	\begin{quote}
+		\textbf{Teorem 5.19} If $ x_0 \in \R^n$ is a solution to the system
+		\[ (A^TA)x = A^Tb \]
+		of $ n $ linear equations with $ n $ unknows, then $ x_0 $ is an optimal solution to 
+		
+		\[ \begin{matrix}
+			\min |b - Ax|^2 \\ x \in \R^n
+		\end{matrix} \]
+	\end{quote}
+	
+	\begin{quote}
+		\textbf{Cauchy-Schwarz inequality}
+		For two vectors $ u,v \in \R^d $,
+		\[ |u*v| \leq |u||v| \]
+		
+		og 
+		
+		\[ -1 \leq \frac{u*v}{|u||v|} \leq 1\]
+		
+		og 
+		
+		\[ \cos(\theta) =  \frac{u*v}{|u||v|}\]
+		
+	\end{quote}	
+
+	\begin{quote}
+		\textbf{Teorem 5.30} For two vectors $ u,v \in \R^d $,
+		\[ |u + v| \leq |u| + |v| \]
+		og
+		\[ |u - v| = |(u - w) + (w - v)| \leq |u - w| + |w - v| \]
+	\end{quote}
+
+	
+	\subsection{Opgaver}	
+	
+		
+\end{document}
